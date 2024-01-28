@@ -8,11 +8,8 @@ jobs:
       - name: Checkout to Main
         run: |
           git clone https://github.com/JihedTR/devops-technical-test-data.git
-          ls
-          #git config --local user.email "jihed.trifi@gmail.com"
-          #git config --local user.name "JihedTR"
-          echo "Checkout to main"
-          #git checkout main
-          #echo "Exit Checkout main"
-
+          cd devops-technical-test-data
+          git config --local user.email "jihed.trifi@gmail.com"
+          git config --local user.name "JihedTR"
+          
 
