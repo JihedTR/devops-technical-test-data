@@ -17,7 +17,8 @@ jobs:
            branch_name=$(date +'%d-%m-%Y')-test
            if ! [ git ls-remote --head | grep -i $(branch_name) ] ; then
              git checkout -b $branch_name
-             git checkout CI -- my-lovely-workflow.yml
+             git branch
+             # git checkout CI -- my-lovely-workflow.yml
              git push --set-upstream origin $branch_name
              echo "La branche est creer" 
            fi
