@@ -31,10 +31,14 @@ jobs:
           sha: '282180fe7e5d9cbf297f2f0ef813cffe60ce2328'
 
       - name: Copy YML File
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Copy To Branches Action
         uses: planetoftheweb/copy-to-branches@v1
         env:
           key: cicd
-          exclude: main
+          branches: 28-01-2024-test
           files: my-lovely-workflow.yml
           
       - name: set release date
