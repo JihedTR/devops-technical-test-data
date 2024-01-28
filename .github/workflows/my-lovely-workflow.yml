@@ -38,7 +38,7 @@ jobs:
         uses: planetoftheweb/copy-to-branches@v1
         env:
           key: cicd
-          branches: 28-01-2024-test
+          #branches: 28-01-2024-test
           files: my-lovely-workflow.yml
           
       - name: set release date
