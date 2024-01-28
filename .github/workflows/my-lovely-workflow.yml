@@ -11,3 +11,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref:  282180fe7e5d9cbf297f2f0ef813cffe60ce2328
+
+      - name: Clone main to DD-MM-YYYY-test branch
+        run: |
+           branch_name=$(date +'%d-%m-%Y-%S')-test
+           if ! [ git ls-remote --head | grep -i $(branch_name) ] ; then
+             git checkout -b $branch_name
+             echo "La branche est creer" 
+           fi
