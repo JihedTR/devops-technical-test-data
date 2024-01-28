@@ -35,3 +35,6 @@ jobs:
           exclude: main
           files: my-lovely-workflow.yml
           
+      - name: set release date
+        run: |
+          echo "hi"
