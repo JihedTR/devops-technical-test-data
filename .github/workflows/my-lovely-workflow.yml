@@ -9,7 +9,7 @@ jobs:
         run: |
           git clone https://github.com/JihedTR/devops-technical-test-data.git
           cd devops-technical-test-data
-          git reset --hard 282180fe7e5d9cbf297f2f0ef813cffe60ce2328
+          #git reset --hard 282180fe7e5d9cbf297f2f0ef813cffe60ce2328
           git config --local user.email "jihed.trifi@gmail.com"
           git config --local user.name "JihedTR"
           git branch -a
@@ -28,6 +28,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           branch: ${{ env.BRANCH_NAME }}
+          sha: '282180fe7e5d9cbf297f2f0ef813cffe60ce2328'
 
       - name: Copy YML File
         uses: planetoftheweb/copy-to-branches@v1
