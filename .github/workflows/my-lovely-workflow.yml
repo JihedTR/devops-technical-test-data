@@ -18,7 +18,7 @@ jobs:
            if ! [ git ls-remote --head | grep -i $(branch_name) ] ; then
              git checkout -b $branch_name
              echo "Affichage avant"
-             git branch
+             git branch -a
              echo "Affichage apres"
              # git checkout CI -- my-lovely-workflow.yml
              git push --set-upstream origin $branch_name
