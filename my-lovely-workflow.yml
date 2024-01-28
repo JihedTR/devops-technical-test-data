@@ -1,0 +1,11 @@
+name: Backup Project 
+on: [push]
+
+jobs:
+  Backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout to Main
+        run: |
+          echo "hello from cicd"
+          
