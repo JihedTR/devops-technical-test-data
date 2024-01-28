@@ -18,8 +18,9 @@ jobs:
         uses: peterjgrainger/action-create-branch@v2.2.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          branch_name: $(date +'%d-%m-%Y')-test
         with:
-          branch: $(date +'%d-%m-%Y')-test
+          branch: $branch_name
           #sha: '${{ github.event.pull_request.head.sha }}'
         
       - name: Copy YML File
