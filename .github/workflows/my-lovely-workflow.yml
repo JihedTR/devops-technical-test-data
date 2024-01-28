@@ -14,9 +14,9 @@ jobs:
           git branch -a
           git config -l
 
-      - name: Generate test branch name
-        id: date
-        run: echo "::set-output name=$(date +'%Y-%m-%d')"
+      - name: set release date
+        run: |
+          echo "BRANCH_NAME=$(date +'%d-%m-%Y')-test" >> ${GITHUB_ENV}
 
       - name: Generate test branch name
-        run: echo ${{ steps.date.outputs.date }}
+        run: echo ${{ env.BRANCH_NAME }}
