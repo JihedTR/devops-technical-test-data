@@ -19,11 +19,12 @@ jobs:
           cd devops-technical-test-data
           branch_name=$(date +'%d-%m-%Y')-test
           git branch -a
+          git config -l
           if ! ( git ls-remote --head | grep -qi $branch_name ) ; then
             git checkout -b $branch_name
             git push --set-upstream origin $branch_name
             echo "La branche est creer"
           fi
           echo "hello"
-          git config -l
+          
 
