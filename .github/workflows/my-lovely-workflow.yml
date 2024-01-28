@@ -12,6 +12,7 @@ jobs:
           git config --local user.email "jihed.trifi@gmail.com"
           git config --local user.name "JihedTR"
           git branch -a
+          git config -l
        
       - name: test branch
         run: |
@@ -24,4 +25,5 @@ jobs:
             echo "La branche est creer"
           fi
           echo "hello"
+          git config -l
 
