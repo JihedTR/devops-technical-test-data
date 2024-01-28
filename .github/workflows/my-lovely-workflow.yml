@@ -11,5 +11,6 @@ jobs:
           cd devops-technical-test-data
           git config --local user.email "jihed.trifi@gmail.com"
           git config --local user.name "JihedTR"
+          git branch -a
           
 
