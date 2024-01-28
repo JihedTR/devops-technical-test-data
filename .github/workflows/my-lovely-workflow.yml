@@ -43,4 +43,4 @@ jobs:
           
       - name: set release date
         run: |
-          echo "hi jihed 2"
+          echo "hi jihed 3"
