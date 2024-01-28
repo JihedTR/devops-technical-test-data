@@ -8,20 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout to Main
-        uses: actions/checkout@v4
-        with:
-          ref:  282180fe7e5d9cbf297f2f0ef813cffe60ce2328
-
-      - name: Clone main to DD-MM-YYYY-test branch
         run: |
-           branch_name=$(date +'%d-%m-%Y')-test
-           echo "Affichage avant"
-           git branch -a
-           echo "Affichage apres"
-           if ! [ git ls-remote --head | grep -i $(branch_name) ] ; then
-             git checkout -b $branch_name
-             # git checkout CI -- my-lovely-workflow.yml
-             git push --set-upstream origin $branch_name
-             echo "La branche est creer" 
-           fi
-           echo "OK GOOD"
+          echo "Checkout to main"
+          git checkout main
+          echo "Exit Checkout main"
+
+
