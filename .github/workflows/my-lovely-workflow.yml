@@ -7,8 +7,13 @@ jobs:
     steps:
       - name: Checkout to Main
         run: |
+          echo "location is:"
+          pwd
           git clone https://github.com/JihedTR/devops-technical-test-data.git
+          ls
           cd devops-technical-test-data
+          echo "location is:"
+          pwd
           git config --local user.email "jihed.trifi@gmail.com"
           git config --local user.name "JihedTR"
           git branch -a
@@ -17,6 +22,7 @@ jobs:
         run: |
           echo "location is:"
           pwd
+          cho "file are:"
           ls
           branch_name=$(date +'%d-%m-%Y')-test
           git branch -a
