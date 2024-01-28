@@ -20,7 +20,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           branch_name: $(date +'%d-%m-%Y')-test
         with:
-          branch: ${{ runner.os }}-test
+          # branch: ${{ runner.os }}-test
+          branch: ${{env.branch_name}}
           #sha: '${{ github.event.pull_request.head.sha }}'
         
       - name: Copy YML File
