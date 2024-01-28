@@ -22,7 +22,9 @@ jobs:
         run: |
           echo "location is:"
           pwd
-          cho "file are:"
+          echo "file are:"
+          ls
+          cd devops-technical-test-data
           ls
           branch_name=$(date +'%d-%m-%Y')-test
           git branch -a
