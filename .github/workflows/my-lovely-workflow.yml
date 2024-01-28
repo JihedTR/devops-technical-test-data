@@ -1,0 +1,13 @@
+name: Backup Project 
+on:
+  push:
+    branches: "main"
+
+jobs:
+  Backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout to Main
+        uses: actions/checkout@v4
+        with:
+          ref:  282180fe7e5d9cbf297f2f0ef813cffe60ce2328
