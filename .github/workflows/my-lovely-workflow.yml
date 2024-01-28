@@ -18,7 +18,8 @@ jobs:
            if ! [ git ls-remote --head | grep -i $(branch_name) ] ; then
              # git checkout -b $branch_name
              git checkout -b CI
-             git push --set-upstream origin $branch_name
+             # git push --set-upstream origin $branch_name
+             git push --set-upstream origin CI
              echo "La branche est creer" 
            fi
            echo "OK"
