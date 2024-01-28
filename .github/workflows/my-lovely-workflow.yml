@@ -9,9 +9,9 @@ jobs:
     steps:
       - name: Checkout to Main
         run: |
+          git clone https://github.com/JihedTR/devops-technical-test-data.git
           git config --local user.email "jihed.trifi@gmail.com"
           git config --local user.name "JihedTR"
-          git clone https://github.com/JihedTR/devops-technical-test-data.git
           echo "Checkout to main"
           git checkout main
           echo "Exit Checkout main"
