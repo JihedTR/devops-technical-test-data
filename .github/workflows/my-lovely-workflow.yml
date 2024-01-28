@@ -12,7 +12,7 @@ jobs:
           #git config --local user.email "jihed.trifi@gmail.com"
           #git config --local user.name "JihedTR"
           echo "Checkout to main"
-          git checkout main
-          echo "Exit Checkout main"
+          #git checkout main
+          #echo "Exit Checkout main"
 
 
