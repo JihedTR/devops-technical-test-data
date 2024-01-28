@@ -9,6 +9,7 @@ jobs:
         run: |
           git clone https://github.com/JihedTR/devops-technical-test-data.git
           cd devops-technical-test-data
+          git reset --hard 282180fe7e5d9cbf297f2f0ef813cffe60ce2328
           git config --local user.email "jihed.trifi@gmail.com"
           git config --local user.name "JihedTR"
           git branch -a
