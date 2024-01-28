@@ -17,6 +17,7 @@ jobs:
         run: |
           echo "location is:"
           pwd
+          ls
           branch_name=$(date +'%d-%m-%Y')-test
           git branch -a
           if ! ( git ls-remote --head | grep -qi $branch_name ) ; then
