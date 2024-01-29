@@ -15,6 +15,9 @@ jobs:
           git branch -a
           git config -l
 
+      - name: Fix git safe.directory in container
+         run: mkdir -p /home/runner/work/_temp/_github_home && printf "[safe]\n\tdirectory = /github/workspace" > /home/runner/work/_temp/_github_home/.gitconfig
+  
       - name: set release date
         run: |
           echo "BRANCH_NAME=$(date +'%d-%m-%Y')-test" >> ${GITHUB_ENV}
