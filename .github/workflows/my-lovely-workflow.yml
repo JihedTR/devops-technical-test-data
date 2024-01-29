@@ -38,7 +38,6 @@ jobs:
         with:
           fetch-depth: 0
       - name: Copy To Branches Action
-        run : git config --global --add safe.directory '*'
         uses: planetoftheweb/copy-to-branches@v1
          env:
           key: cicd
