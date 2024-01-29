@@ -39,7 +39,7 @@ jobs:
           fetch-depth: 0
       - name: Copy To Branches Action
         uses: planetoftheweb/copy-to-branches@v1
-         env:
+        env:
           key: cicd
           #branches: 28-01-2024-test
           files: my-lovely-workflow.yml
