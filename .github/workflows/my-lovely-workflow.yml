@@ -32,7 +32,7 @@ jobs:
 
       - name: delete security on global safe and copy
         run: 
-            git config --global --add safe.directory '*'
+            git config --global --add safe.directory "*"
             git checkout cicd my-lovely-workflow.yml
             
       - name: Copy YML File
