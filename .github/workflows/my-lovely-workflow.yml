@@ -13,6 +13,7 @@ jobs:
           git config --local user.email "jihed.trifi@gmail.com"
           git config --local user.name "JihedTR"
           git config --global --add safe.directory '*'
+          git config --global --add safe.directory /github/workspace
           git branch -a
           git config -l
       - name: set release date
@@ -42,4 +43,4 @@ jobs:
           
       - name: set release date
         run: |
-          echo "hi jihed 4"
+          echo "hi jihed 5"
