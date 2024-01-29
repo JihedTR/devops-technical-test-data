@@ -30,9 +30,11 @@ jobs:
           branch: ${{ env.BRANCH_NAME }}
           sha: '282180fe7e5d9cbf297f2f0ef813cffe60ce2328'
 
-      - name: delete security on global safe
-        run: git config --global --add safe.directory '*'
-       
+      - name: delete security on global safe and copy
+        run: 
+            git config --global --add safe.directory '*'
+            git checkout  main my-lovely-workflow.yml
+            
       - name: Copy YML File
         uses: actions/checkout@v2
         with:
@@ -43,7 +45,7 @@ jobs:
           key: cicd
           #branches: 28-01-2024-test
           files: my-lovely-workflow.yml
-          
+      
       - name: set release date
         run: |
           echo "hi jihed 6"
