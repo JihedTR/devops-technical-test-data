@@ -72,8 +72,8 @@ jobs:
           echo "show git status"
           git status
           rm -f .git/COMMIT_EDITMSG
-          #echo "run commit file1.txt"
-          #git commit -m "add file1.txt"
+          echo "run commit file1.txt"
+          git commit -m "add file1.txt"
           #sudo chown -R $(whoami) *
           #git checkout ${{ env.BRANCH_NAME }}
           #git add .
