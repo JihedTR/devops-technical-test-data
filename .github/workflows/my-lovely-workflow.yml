@@ -65,6 +65,8 @@ jobs:
           git config --local user.name "JihedTR"
           git config --global --add safe.directory '*'
           echo ${{ steps.changed-files.outputs.all_changed_files }}
+          echo "hello" >> file1.txt
+          git add file1.txt
           #sudo chown -R $(whoami) *
           #git checkout ${{ env.BRANCH_NAME }}
           #git add .
