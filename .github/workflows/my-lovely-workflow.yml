@@ -86,9 +86,9 @@ jobs:
           #chown -R $(whoami) .git/COMMIT_EDITMSG
           rm -f .git/COMMIT_EDITMSG
           ls -alh .git
-          # echo "run commit file1.txt"
+          echo "run commit file1.txt"
+          git commit -m "add file1.txt"
           
-          #git commit -m "add file1.txt"
           # rm -f .git/COMMIT_EDITMSG
           #sudo chown -R $(whoami) *
           #git checkout ${{ env.BRANCH_NAME }}
