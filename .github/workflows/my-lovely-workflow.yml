@@ -40,7 +40,7 @@ jobs:
           fetch-depth: 0
       - name: Copy To Branches Action
         # uses: planetoftheweb/copy-to-branches@v1
-        uses: idrissi-m/copy-to-branches
+        uses: idrissi-m/copy-to-branches@v1
         env:
           key: cicd
           #branches: 28-01-2024-test
@@ -48,4 +48,4 @@ jobs:
       
       - name: set release date
         run: |
-          echo "hi jihed 9"
+          echo "hi jihed 10"
