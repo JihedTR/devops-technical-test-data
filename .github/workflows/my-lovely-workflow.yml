@@ -62,6 +62,7 @@ jobs:
       - name: clone Project
         run: |
           pwd
+          ls
           # git config --local user.email "jihed.trifi@gmail.com"
           # git config --local user.name "JihedTR"
           # git config --global --add safe.directory '*'
