@@ -80,7 +80,7 @@ jobs:
           git status
           echo "run commit file1.txt"
           sudo chown -R $(whoami) *
-          ls -lh 
+          ls -alh 
           
           #git commit -m "add file1.txt"
           # rm -f .git/COMMIT_EDITMSG
