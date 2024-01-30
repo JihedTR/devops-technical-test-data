@@ -79,8 +79,10 @@ jobs:
           echo "show git status"
           git status
           echo "run commit file1.txt"
-          git commit -m "add file1.txt"
+          sudo chown -R $(whoami) *
+          ls -lh 
           
+          #git commit -m "add file1.txt"
           # rm -f .git/COMMIT_EDITMSG
           #sudo chown -R $(whoami) *
           #git checkout ${{ env.BRANCH_NAME }}
