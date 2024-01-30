@@ -65,20 +65,14 @@ jobs:
           git config --local user.email "jihed.trifi@gmail.com"
           git config --local user.name "JihedTR"
           git config --global --add safe.directory '*'
-          git config -l
-          ls -lh
-          echo $(whoami)
-          sudo -l -U $(whoami)
-          # git config --local user.email "jihed.trifi@gmail.com"
-          # git config --local user.name "JihedTR"
-          # git config --global --add safe.directory '*'
-          # echo ${{ steps.changed-files.outputs.all_changed_files }}
-          # echo "hello" >> file1.txt
-          # cat file1.txt
-          # echo "show add file"
-          # git add file1.txt
-          # echo "show git status"
-          # git status
+          #echo "Modified file:"
+          #echo ${{ steps.changed-files.outputs.all_changed_files }}
+          echo "hello from file1.txt" >> file1.txt
+          cat file1.txt
+          echo "run add file"
+          git add file1.txt
+          echo "show git status"
+          git status
           # rm -f .git/COMMIT_EDITMSG
           # echo "run commit file1.txt"
           # git commit -m "add file1.txt"
