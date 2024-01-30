@@ -67,7 +67,11 @@ jobs:
           echo ${{ steps.changed-files.outputs.all_changed_files }}
           echo "hello" >> file1.txt
           cat file1.txt
+          echo "show add file"
           git add file1.txt
+          echo "show git status"
+          git status
+          echo "show commit file1.txt"
           git commit -m "add file1.txt"
           #sudo chown -R $(whoami) *
           #git checkout ${{ env.BRANCH_NAME }}
