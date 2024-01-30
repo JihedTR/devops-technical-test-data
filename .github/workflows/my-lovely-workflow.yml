@@ -9,11 +9,9 @@ jobs:
         run: |
           git clone https://github.com/JihedTR/devops-technical-test-data.git
           cd devops-technical-test-data
-          # git reset --hard 282180fe7e5d9cbf297f2f0ef813cffe60ce2328
           git config --local user.email "jihed.trifi@gmail.com"
           git config --local user.name "JihedTR"
           # git config --global --add safe.directory '*'
-          # git config --global --add safe.directory "*"
           git branch -a
           git config -l
           
@@ -65,6 +63,7 @@ jobs:
         run: |
           git config --local user.email "jihed.trifi@gmail.com"
           git config --local user.name "JihedTR"
+          git config --global --add safe.directory '*'
           git checkout ${{ env.BRANCH_NAME }}
           git add .
           git commit -m "test commit"
