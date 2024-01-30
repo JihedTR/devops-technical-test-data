@@ -56,8 +56,12 @@ jobs:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           for file in "$ALL_CHANGED_FILES"; do
-            echo "$file was changed"
+            echo "$file was changed in $(pwd)"
           done
+          echo "branch name"
+          git branch
+          git log --oneline -5
+
           
       - name: move to main branch
         uses: actions/checkout@v2
@@ -78,7 +82,6 @@ jobs:
           sudo chown -R $(whoami) *
           echo "rm .git/COMMIT_EDITMSG"
           rm -f .git/COMMIT_EDITMSG
-          ls -alh .git
           # echo "run commit file1.txt"
           # git commit -m "add file1.txt"
 
