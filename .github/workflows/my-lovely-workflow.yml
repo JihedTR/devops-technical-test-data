@@ -9,16 +9,18 @@ jobs:
         run: |
           git clone https://github.com/JihedTR/devops-technical-test-data.git
           cd devops-technical-test-data
-          #git reset --hard 282180fe7e5d9cbf297f2f0ef813cffe60ce2328
+          # git reset --hard 282180fe7e5d9cbf297f2f0ef813cffe60ce2328
           git config --local user.email "jihed.trifi@gmail.com"
           git config --local user.name "JihedTR"
-          git config --global --add safe.directory '*'
-          git config --global --add safe.directory "*"
+          # git config --global --add safe.directory '*'
+          # git config --global --add safe.directory "*"
           git branch -a
           git config -l
+          
       - name: set release date
         run: |
           echo "BRANCH_NAME=$(date +'%d-%m-%Y')-test" >> ${GITHUB_ENV}
+        
       - name: Generate test branch name
         run: echo ${{ env.BRANCH_NAME }}
 
@@ -43,7 +45,7 @@ jobs:
         uses: idrissi-m/copy-to-branches@v1
         env:
           key: cicd
-          exclude: main
+          #exclude: main
           files: my-lovely-workflow.yml
       
       - name: set release date
