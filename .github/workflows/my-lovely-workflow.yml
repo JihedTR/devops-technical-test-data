@@ -61,19 +61,20 @@ jobs:
 
       - name: clone Project
         run: |
-          git config --local user.email "jihed.trifi@gmail.com"
-          git config --local user.name "JihedTR"
-          git config --global --add safe.directory '*'
-          echo ${{ steps.changed-files.outputs.all_changed_files }}
-          echo "hello" >> file1.txt
-          cat file1.txt
-          echo "show add file"
-          git add file1.txt
-          echo "show git status"
-          git status
-          rm -f .git/COMMIT_EDITMSG
-          echo "run commit file1.txt"
-          git commit -m "add file1.txt"
+          pwd
+          # git config --local user.email "jihed.trifi@gmail.com"
+          # git config --local user.name "JihedTR"
+          # git config --global --add safe.directory '*'
+          # echo ${{ steps.changed-files.outputs.all_changed_files }}
+          # echo "hello" >> file1.txt
+          # cat file1.txt
+          # echo "show add file"
+          # git add file1.txt
+          # echo "show git status"
+          # git status
+          # rm -f .git/COMMIT_EDITMSG
+          # echo "run commit file1.txt"
+          # git commit -m "add file1.txt"
           #sudo chown -R $(whoami) *
           #git checkout ${{ env.BRANCH_NAME }}
           #git add .
