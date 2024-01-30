@@ -60,6 +60,16 @@ jobs:
           for file in "$ALL_CHANGED_FILES"; do
             echo "$file was changed"
           done
+
+      - name: clone Project
+        run: |
+          git config --local user.email "jihed.trifi@gmail.com"
+          git config --local user.name "JihedTR"
+          git checkout ${{ env.BRANCH_NAME }}
+          git add .
+          git commit -m "test commit"
+          git push -u origin ${{ env.BRANCH_NAME }}
+      
       - name: set release date
         run: |
           echo "Hi jihed 13"
