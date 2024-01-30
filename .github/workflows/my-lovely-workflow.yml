@@ -39,7 +39,8 @@ jobs:
         with:
           fetch-depth: 0
       - name: Copy To Branches Action
-        uses: planetoftheweb/copy-to-branches@v1
+        # uses: planetoftheweb/copy-to-branches@v1
+        uses: idrissi-m/copy-to-branches
         env:
           key: cicd
           #branches: 28-01-2024-test
