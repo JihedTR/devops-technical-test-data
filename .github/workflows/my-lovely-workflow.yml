@@ -54,6 +54,8 @@ jobs:
 
       - name: delete yml from main
         run: |
+          git config --local user.email "jihed.trifi@gmail.com"
+          git config --local user.name "JihedTR"
           git rm my-lovely-workflow.yml
           git commit -m "delete yml from main branch"
           git push origin main
