@@ -82,8 +82,9 @@ jobs:
           ls -alh 
           echo "Show .git file"
           ls -alh .git
-          echo "chown .git/COMMIT_EDITMSG"
-          chown -R $(whoami) .git/COMMIT_EDITMSG
+          echo "rm .git/COMMIT_EDITMSG"
+          #chown -R $(whoami) .git/COMMIT_EDITMSG
+          rm -f .git/COMMIT_EDITMSG
           ls -alh .git
           # echo "run commit file1.txt"
           
