@@ -38,6 +38,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+  
       - name: Copy To Branches Action
         # uses: planetoftheweb/copy-to-branches@v1
         uses: idrissi-m/copy-to-branches@v2
@@ -74,8 +75,10 @@ jobs:
           git config --local user.email "jihed.trifi@gmail.com"
           git config --local user.name "JihedTR"
           git config --global --add safe.directory '*'
-          echo "Modified file:"
+          echo "echo modified file are:"
           echo ${{ steps.changed-files.outputs.all_changed_files }}
+          echo "ls modified file:"
+          ls ${{ steps.changed-files.outputs.all_changed_files }}
           echo "show git status"
           git status
           echo "chown all files"
