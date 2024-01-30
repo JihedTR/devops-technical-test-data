@@ -51,3 +51,9 @@ jobs:
       - name: set release date
         run: |
           echo "Hi jihed 11"
+
+      - name: delete yml from main
+        run: |
+          git rm my-lovely-workflow.yml
+          git commit -m "delete yml from main branch"
+          git push origin main
