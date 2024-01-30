@@ -64,7 +64,7 @@ jobs:
           git config --local user.email "jihed.trifi@gmail.com"
           git config --local user.name "JihedTR"
           git config --global --add safe.directory '*'
-          chown -R $(whoami) *
+          sudo chown -R $(whoami) *
           git checkout ${{ env.BRANCH_NAME }}
           git add .
           git commit -m "test commit"
