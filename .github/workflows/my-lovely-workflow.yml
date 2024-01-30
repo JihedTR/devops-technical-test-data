@@ -15,6 +15,7 @@ jobs:
           git branch -a
           git config -l
           
+          
       - name: set release date
         run: |
           echo "BRANCH_NAME=$(date +'%d-%m-%Y')-test" >> ${GITHUB_ENV}
@@ -87,7 +88,8 @@ jobs:
           rm -f .git/COMMIT_EDITMSG
           # echo "run commit file1.txt"
           # git commit -m "add file1.txt"
-
+          # git diff --name-status main
+          
           #git checkout ${{ env.BRANCH_NAME }}
           #git add .
           #git commit -m "test commit"
