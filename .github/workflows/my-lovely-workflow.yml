@@ -67,6 +67,7 @@ jobs:
           git config --global --add safe.directory '*'
           git config -l
           ls -lh
+          echo $(whoami)
           # git config --local user.email "jihed.trifi@gmail.com"
           # git config --local user.name "JihedTR"
           # git config --global --add safe.directory '*'
