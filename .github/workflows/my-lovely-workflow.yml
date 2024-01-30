@@ -64,11 +64,12 @@ jobs:
           git config --local user.email "jihed.trifi@gmail.com"
           git config --local user.name "JihedTR"
           git config --global --add safe.directory '*'
-          sudo chown -R $(whoami) *
-          git checkout ${{ env.BRANCH_NAME }}
-          git add .
-          git commit -m "test commit"
-          git push -u origin ${{ env.BRANCH_NAME }}
+          echo ${{ steps.changed-files.outputs.all_changed_files }}
+          #sudo chown -R $(whoami) *
+          #git checkout ${{ env.BRANCH_NAME }}
+          #git add .
+          #git commit -m "test commit"
+          #git push -u origin ${{ env.BRANCH_NAME }}
       
       - name: set release date
         run: |
