@@ -78,6 +78,7 @@ jobs:
         if : on.push.${{ env.BRANCH_NAME }} == "true"
         run: |
           echo "Yeees"
+          echo "The branch name is: ${{ env.BRANCH_NAME }}"
       
       # - name: clone Project
       #   run: |
