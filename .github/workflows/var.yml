@@ -1,0 +1,10 @@
+name: Backup Project
+on: [push]
+
+jobs:
+  Backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone Project
+        run: |
+          echo $GITHUB_REF_NAME
