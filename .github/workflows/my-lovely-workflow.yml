@@ -75,7 +75,8 @@ jobs:
 
       - name: If push to test branch
         # if : steps.check.outputs.triggered == 'true'
-        if : on.push.${{ env.BRANCH_NAME }} == "true"
+        #if : on.push.${{ env.BRANCH_NAME }} == "true"
+        if : "gitlab.ref == 'refs/heads/${{ env.BRANCH_NAME }'"
         run: |
           echo "Yeees"
           echo "The branch name is: ${{ env.BRANCH_NAME }}"
