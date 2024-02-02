@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - "02-02-2024-test"
-      - "*test*"
-
+    paths:
+      - ".github/workflows/myworkflow.yml"
 jobs:
   deploy:
     runs-on: ubuntu-latest
