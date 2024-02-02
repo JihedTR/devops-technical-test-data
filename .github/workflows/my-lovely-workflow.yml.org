@@ -1,6 +1,9 @@
 name: Backup Project 
 on: [push]
 
+env:
+  USER: 'Jihed'
+
 jobs:
   Backup:
     runs-on: ubuntu-latest
@@ -97,4 +100,4 @@ jobs:
       
       - name: set release date
         run: |
-          echo "Hi jihed 13"
+          echo "Hi $USER"
