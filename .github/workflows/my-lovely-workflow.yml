@@ -1,6 +1,7 @@
 name: Backup Project 
-on: [push]
-
+on:
+  push:
+    branches: main
 env:
   USER: 'Jihed'
 
