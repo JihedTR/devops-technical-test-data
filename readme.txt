@@ -8,7 +8,7 @@ on push
 
   
   
-  
+  zczc
   variable_date= date( %DD+%MM+%YYYY)
   
   git checkout branch $variable_date
