@@ -1,0 +1,15 @@
+name: Backup Project 
+on: [push]
+
+env:
+  USER: 'Jihed'
+
+jobs:
+  Backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone Project
+        run: |
+          git clone https://github.com/JihedTR/devops-technical-test-data.git
+          cd devops-technical-test-data
+          git config --local user.email "jihed.trifi@gmail.com"
