@@ -72,14 +72,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-
-      - name: If push to test branch
-        # if : steps.check.outputs.triggered == 'true'
-        #if : on.push.${{ env.BRANCH_NAME }} == "true"
-        if : "${GITHUB_REF} == 'refs/heads/02-02-2024-test'"
-        run: |
-          echo "Yeees"
-          echo "The branch name is: ${{ env.BRANCH_NAME }}"
       
       # - name: clone Project
       #   run: |
