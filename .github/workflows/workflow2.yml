@@ -1,5 +1,8 @@
 name: Backup Project 
-on: [push]
+on: 
+  push:
+   branches:
+     - 02-02-2024-test
 
 env:
   USER: 'Jihed'
@@ -10,6 +13,4 @@ jobs:
     steps:
       - name: clone Project
         run: |
-          git clone https://github.com/JihedTR/devops-technical-test-data.git
-          cd devops-technical-test-data
-          git config --local user.email "jihed.trifi@gmail.com"
+          echo "hello test branch"
