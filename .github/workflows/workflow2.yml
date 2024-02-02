@@ -1,16 +1,18 @@
-name: Backup Project 
-on: 
-  push:
-   branches:
-     - 02-02-2024-test
+name: Workflow for Branch 2
 
-env:
-  USER: 'Jihed'
+on:
+  push:
+    branches:
+      - 02-02-2024-test
 
 jobs:
-  Backup:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: clone Project
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy your application
         run: |
-          echo "hello test branch"
+         echo "hello !"
