@@ -18,3 +18,5 @@ on push
   mkdir data
   if file exist tu ne fais rien 
   else mkdir -p $pwd && cp $file /data/$pwd
+
+khgc
