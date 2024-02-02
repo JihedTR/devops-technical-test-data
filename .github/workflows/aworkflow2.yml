@@ -3,7 +3,7 @@ name: Workflow for Branch 2
 on:
   push:
     branches:
-      - main
+      - 02-02-2024-test
 
 jobs:
   deploy:
