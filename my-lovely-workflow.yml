@@ -8,4 +8,5 @@ jobs:
       - name: Checkout to Main
         run: |
           echo "hello from cicd"
-          
+          echo "GITHUB_SHA: ${GITHUB_SHA}"
+          git diff --name-only
