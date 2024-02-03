@@ -4,13 +4,13 @@
 REPO_URL="https://github.com/descartes-underwriting/devops-technical-test-data.git"
 BRANCH_NAME=$(date +'%d-%m-%Y')"-test"
 BACKUP_DIR="data"
-SHA=$(git ls-remote $REPO_URL $BRANCH_NAME | awk '{ print $1 }')
+#SHA=$(git ls-remote $REPO_URL $BRANCH_NAME | awk '{ print $1 }')
 
 # Create backup directory
 mkdir -p $BACKUP_DIR
 
 # Clone the repository with only the specific branch
-git clone --branch $BRANCH_NAME --single-branch $REPO_URL $BACKUP_DIR
+#git clone --branch $BRANCH_NAME --single-branch $REPO_URL $BACKUP_DIR
 
 # Change directory to the cloned repository
 cd $BACKUP_DIR
