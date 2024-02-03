@@ -13,7 +13,18 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - name: Set up Git
+        run:
+          git config user.name "JihedTR"
+          git config user.email "jihed.trifi@gmail.com"
+    
       - name: Execute Backup Script
         run: 
            chmod +x backup.sh
            ./backup.sh
+     
+      - name: Commit and Push Changes
+         run: |
+          git add .
+          git commit -m "Automated backup for commit: $COMMIT_HASH"
+          git push origin $GITHUB_REF
