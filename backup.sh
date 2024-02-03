@@ -1,32 +1,39 @@
-#!/bin/bash
+EPO_URL="https://github.com/descartes-underwriting/devops-technical-test-data.git"
+BRANCH_NAME=$(date +'%d-%m-%Y')"-test"
+BACKUP_DIR="data"
+#SHA=$(git ls-remote $REPO_URL $BRANCH_NAME | awk '{ print $1 }')
 
-# Set variables
-REPO_URL="https://github.com/descartes-underwriting/devops-technical-test-data.git"
-BRANCH="DD-MM-YYYY-test"
-START_COMMIT="282180fe7e5d9cbf297f2f0ef813cffe60ce2328"
-BACKUP_BASE_DIR="/path/to/backup/directory"
+# Create backup directory
+mkdir -p $BACKUP_DIR
 
-# Clone the repository
-git clone --branch $BRANCH $REPO_URL
-cd devops-technical-test-data
+# Clone the repository with only the specific branch
+#git clone --branch $BRANCH_NAME --single-branch $REPO_URL $BACKUP_DIR
 
-# Iterate through commits and perform backup
+# Change directory to the cloned repository
+cd $BACKUP_DIR
+
 git rev-list --reverse $START_COMMIT..HEAD | while read commit; do
     # Create backup folder based on SHA1
     backup_folder="$BACKUP_BASE_DIR/$(git show --format=%H -s $commit)"
     mkdir -p $backup_folder
 
-    # Checkout the specific commit
-    git checkout $commit
 
-    # Copy changed files to backup folder
-    git diff-tree --no-commit-id --name-only -r $commit | \
-        xargs -I {} cp --parents {} $backup_folder
-done
+# Get the latest commit hash
+#COMMIT_HASH=$(git rev-parse HEAD)
 
-# Cleanup: return to the latest commit and remove cloned repository
-git checkout $BRANCH
-cd ..
-rm -rf devops-technical-test-data
+# Create a folder based on the commit hash
+#mkdir -p $COMMIT_HASH
 
-echo "Backup completed successfully!"
+# Copy modified files to the backup folder
+git diff-tree --no-commit-id --name-only -r $COMMIT_HASH | xargs -I {} cp --parents {} $COMMIT_HASH
+
+# Create a tarball of the backup folder
+#tar -czf $COMMIT_HASH.tar.gz $COMMIT_HASH
+
+# Clean up the temporary backup folder
+#rm -r $COMMIT_HASH
+
+# Move the tarball to a central location or upload it to cloud storage
+
+# Print a success message
+echo "Backup completed for commit: $COMMIT_HASH"
