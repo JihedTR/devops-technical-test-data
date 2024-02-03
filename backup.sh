@@ -14,8 +14,8 @@ cd $BACKUP_DIR
 
 git rev-list --reverse $START_COMMIT..HEAD | while read commit; do
     # Create backup folder based on SHA1
-    backup_folder="$BACKUP_BASE_DIR/$(git show --format=%H -s $commit)"
-    mkdir -p $backup_folder
+    backup_folder="$BACKUP_DIR/$(git show --format=%H -s $commit)"
+#    mkdir -p $backup_folder
 
 
 # Get the latest commit hash
