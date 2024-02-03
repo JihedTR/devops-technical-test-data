@@ -24,7 +24,7 @@ jobs:
            ./backup.sh
      
       - name: Commit and Push Changes
-         run: |
+        run: |
           git add .
           git commit -m "Automated backup for commit: $COMMIT_HASH"
           git push origin $GITHUB_REF
