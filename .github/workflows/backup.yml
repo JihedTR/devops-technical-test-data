@@ -1,0 +1,17 @@
+name: Backup Workflow
+
+on:
+  push:
+    branches:
+      - 03-02-2024-test
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Execute Backup Script
+        run: ./backup_script.sh
