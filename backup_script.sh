@@ -27,5 +27,7 @@ for commit in $commits; do
     # Incrémentation du compteur
     ((count++))
 done
-
+git commit -m "Renaming file"
+git config --global user.name "JihedTR"
+ git commit -m "Renaming file"
 echo "Backup complet dans le répertoire $backup_dir/"
