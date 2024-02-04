@@ -1,1 +1,2 @@
 echo "from bash" 
+dc
