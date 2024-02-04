@@ -1,9 +1,9 @@
-name: Backup Workflow
+name: Workflow for Branch 2
 
 on:
   push:
     branches:
-      - '02-02-2024-test'
+      - "02-02-2024-test"
 
 jobs:
   backup:
