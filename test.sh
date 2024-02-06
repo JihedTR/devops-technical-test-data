@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Define repository and branch information
+# Define repository and branch information ersge
 REPO_URL="https://github.com/JihedTR/devops-technical-test-data.git"
 
 git clone --branch $BRANCH $REPO_URL
